@@ -79,6 +79,55 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
+    <!-- Custom JS -->
+    <script>
+
+    function playSound(e) {
+
+      // Select audio element
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+
+      // Select key element
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+      // Stop function from running
+      // if audio not found
+      if (!audio) return;
+
+      // Rewind audio
+      // keep hammering the drum kit
+      audio.currentTime = 0;
+
+      // Run audio
+      // only if present
+      // with specific data-key
+      audio.play();
+
+      // Add css trasition to
+      // drum kit element
+      key.classList.add("playing");
+
+    }
+
+    function removeTransition(e) {
+      // Skip transtion end if transform didn't end yet
+      if (e.propertyName !== "transform") return;
+
+      // Reverse transtion (this binding)
+      this.classList.remove("playing");
+    }
+
+    // Add event listener
+    window.addEventListener("keydown", playSound);
+
+    // Remove transition class
+    const keys = document.querySelectorAll(".key");
+
+    // Add transitionend event listener to all keys
+    keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
+    </script>
+
   </body>
 
 </html>

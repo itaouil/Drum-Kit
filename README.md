@@ -1,4 +1,4 @@
-# **Drum-Kit-WB**
+# **Drum-Kit**
 
 This is part of the JavaScript30 movement, where we code and create a vanillaJS based project every day for 30 days. Today is day1 and I managed to finish the Drum Kit project, whose screenshot is beneath.
 

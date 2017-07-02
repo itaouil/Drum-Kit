@@ -2,6 +2,8 @@
 
 This is part of the JavaScript30 movement, where we code and create a vanillaJS based project every day for 30 days. Today is day1 and I managed to finish the Drum Kit project, whose screenshot is beneath.
 
+![alt](https://github.com/itaouil95/Drum-Kit/blob/master/drum-kit.png)
+
 **Development**
 
 So the project as briefly introduced before consisted in created a drum kit using just pure JavaScript. Where the user, helped by the GUI, which is showing the combination of sound to keyboard's key pressed can press one of the showed keys, and the event would fire a visual change as well as an audio playing. Like a Drum kit, yeahhhh.
